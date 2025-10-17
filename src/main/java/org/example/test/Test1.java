@@ -12,22 +12,5 @@ public class Test1 {
 
     public static void main(String[] args) {
 
-        DashScopeChatOptions customOptions = DashScopeChatOptions.builder()
-                .withTopP(0.7)
-                .withTopK(50)
-                .withTemperature(0.8)
-                .withModel("xxx")
-                .build();
-
-
-
-
-         dashScopeChatClient = chatClientBuilder
-                .defaultSystem(DEFAULT_PROMPT)
-                .defaultAdvisors(MessageChatMemoryAdvisor.builder(MessageWindowChatMemory.builder().build()).build())
-                .defaultAdvisors(new SimpleLoggerAdvisor())
-                .defaultOptions(customOptions)
-                .build();
-
     }
 }
